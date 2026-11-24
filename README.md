@@ -1,3 +1,13 @@
+reg number : Reg number 
+-------  ------- 
+     
+1. 27287/2024
+2. 26160/2024
+3. 26023/2024
+4. 26497/2024
+5. 26568/2024
+
+  
 # studyplanner
 
 A new Flutter project.
