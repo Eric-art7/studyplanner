@@ -1,8 +1,10 @@
 import 'package:material_ui/material_ui.dart';
-//STATIC : this is main class to run app 
+
+//STATIC : this is main class to run app
 void main() {
   runApp(const MyApp());
 }
+
 //STATIC : this is root class
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -17,7 +19,8 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-// STATIC : HOME SCREEN 
+
+// STATIC : HOME SCREEN (now Stateful, so the screen can change)
 class MyHomescreen extends StatefulWidget {
   const MyHomescreen({super.key});
 
@@ -26,12 +29,8 @@ class MyHomescreen extends StatefulWidget {
 }
 
 class _MyHomescreenState extends State<MyHomescreen> {
-
-        @override
-  Widget build(BuildContext context) {
-
-    // LOGIC : the data. A list of Maps with keys: subject, hours, done.
-      final List<Map<String, dynamic>> goals = [
+  // LOGIC : the data. A list of Maps with keys: subject, hours, done.
+  final List<Map<String, dynamic>> goals = [
     {'subject': 'learn flutter', 'hours': 8, 'done': false},
     {'subject': 'learn python', 'hours': 6, 'done': false},
     {'subject': 'learn new skills of flutter', 'hours': 4, 'done': true},
@@ -72,8 +71,10 @@ class _MyHomescreenState extends State<MyHomescreen> {
     });
   }
 
+  @override
+  Widget build(BuildContext context) {
     return Scaffold(
-            appBar: AppBar(
+      appBar: AppBar(
         title: const Text('My Study Planner'),
         centerTitle: true,
         backgroundColor: Colors.indigo,
@@ -81,9 +82,9 @@ class _MyHomescreenState extends State<MyHomescreen> {
       ),
 
       // STATIC : heading texts + the list area.
-      body:  Column(
-          children: [
-                  const Text(
+      body: Column(
+        children: [
+          const Text(
             'Welcome to My Study Planner!',
             style: TextStyle(
               fontSize: 24,
@@ -97,9 +98,9 @@ class _MyHomescreenState extends State<MyHomescreen> {
             style: TextStyle(fontSize: 15, color: Colors.black54),
           ),
 
-          const SizedBox(height: 8),
+          const SizedBox(height: 5),
 
-            // STATIC : scrollable list built from the data (no more hard-coded cards).
+          // STATIC : scrollable list built from the data (no more hard-coded cards).
           Expanded(
             child: ListView.builder(
               // CONNECTION 1 : UI reads LOGIC data (the goals list).
@@ -144,22 +145,15 @@ class _MyHomescreenState extends State<MyHomescreen> {
               },
             ),
           ),
-        
+        ],
+      ),
 
-          ],
-        
-        ),
-
-           // STATIC : button now adds a sample goal.
+      // STATIC : button now adds a sample goal.
       floatingActionButton: FloatingActionButton(
         onPressed: addSampleGoal, // CONNECTION 2 : UI event calls LOGIC.
         backgroundColor: const Color.fromARGB(255, 105, 179, 171),
         child: const Icon(Icons.add, color: Colors.white70),
       ),
-
-        
-      
     );
   }
-
 }
