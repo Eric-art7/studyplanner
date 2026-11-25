@@ -1,10 +1,8 @@
 import 'package:material_ui/material_ui.dart';
-
-//STATIC : this is main class to run app
+//STATIC : this is main class to run app 
 void main() {
   runApp(const MyApp());
 }
-
 //STATIC : this is root class
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -19,15 +17,13 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
-// STATIC : HOME SCREEN (now Stateful, so the screen can change)
+// STATIC : HOME SCREEN 
 class MyHomescreen extends StatefulWidget {
   const MyHomescreen({super.key});
 
   @override
   State<MyHomescreen> createState() => _MyHomescreenState();
 }
-
 class _MyHomescreenState extends State<MyHomescreen> {
   // LOGIC : the data. A list of Maps with keys: subject, hours, done.
   final List<Map<String, dynamic>> goals = [
