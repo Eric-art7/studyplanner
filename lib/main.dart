@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       title: 'My Study Planner',
       theme: ThemeData(),
       home: const MyHomescreen(),
-    );
+    ); 
   }
 }
 // STATIC : HOME SCREEN 
@@ -89,7 +89,7 @@ class _MyHomescreenState extends State<MyHomescreen> {
             ),
           ),
 
-          const Text(
+          const Text( 
             'well arranged study goals better improve',
             style: TextStyle(fontSize: 15, color: Colors.black54),
           ),
