@@ -1,9 +1,9 @@
 import 'package:material_ui/material_ui.dart';
-
+//STATIC : this is main class to run app 
 void main() {
   runApp(const MyApp());
 }
-
+//STATIC : this is root class
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
+// STATIC : HOME SCREEN 
 class MyHomescreen extends StatelessWidget {
   const MyHomescreen({super.key});
 
@@ -30,6 +30,8 @@ class MyHomescreen extends StatelessWidget {
         backgroundColor: Colors.indigo,
         foregroundColor: Colors.white,
       ),
+
+      // STATIC: Scrollable page content.
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -46,7 +48,7 @@ class MyHomescreen extends StatelessWidget {
 
            const SizedBox(height: 5),
 
-             
+              // STATIC: Hard-coded goal cards.  
             Card(borderOnForeground: true, shadowColor: Colors.indigoAccent, 
               shape: BeveledRectangleBorder(borderRadius: BorderRadiusGeometry.circular(4),
                side: const BorderSide(
@@ -91,6 +93,7 @@ class MyHomescreen extends StatelessWidget {
         ),
       ),
        
+       // STATIC: Button does nothing in Phase 1.
       floatingActionButton: FloatingActionButton(onPressed: () {},
        child: const Icon(Icons.add, color: Colors.white70),
       backgroundColor: const Color.fromARGB(255, 105, 179, 171),    
