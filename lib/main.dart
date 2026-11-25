@@ -143,7 +143,6 @@ class _MyHomescreenState extends State<MyHomescreen> {
           ),
         ],
       ),
-
       // STATIC : button now adds a sample goal.
       floatingActionButton: FloatingActionButton(
         onPressed: addSampleGoal, // CONNECTION 2 : UI event calls LOGIC.
