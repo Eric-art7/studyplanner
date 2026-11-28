@@ -153,7 +153,7 @@ class _MyHomescreenState extends State<MyHomescreen> {
             ),
           ),
 
-          const SizedBox(height: 5),
+          const SizedBox(height: 15),
 
           // STATIC : empty message OR the scrollable list.
           Expanded(
